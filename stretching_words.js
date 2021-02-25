@@ -15,3 +15,37 @@ function stretchingWords() {
 window.onload = stretchingWords;
 
 export { stretchingWords };
+
+//-----------------------------CSS ----------------
+.stretch-animation {
+  animation-duration: 2.2s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(20%) scaleX(1.5);
+  }
+  to {
+    transform: translateX(0) scaleX(1);
+  }
+}
+
+//--------------------------------HTML--------------
+
+<div class="banner-projects projects-banner-grid ">
+  <div class="projects-banner-title-container">
+    <div class="stretch-animation projects-banner-title"> 
+        SOME P<span style="color:yellow;">RO</span>JECTS<br>&nbsp;&nbsp;&nbsp;I HAVE<br>&nbsp;W<span style="color:yellow;">OR</span>KED ON
+    </div>
+    <div class="projects-banner-clock-container">  
+    <p id="show-date"></p>
+    </div>
+  </div>
+  
+<script>
+  function stretchingWords() {
+    document.querySelector('stretch-animation') 
+  }
+</script>
